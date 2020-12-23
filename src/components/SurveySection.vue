@@ -16,7 +16,7 @@
 					<question-range v-if="question.type == 'range'" :key="index" :question="question" />
 					<question-multiple v-else-if="question.type == 'multiple'" :key="index" :question="question" />
 					<question-text v-else-if="question.type == 'text'" :key="index" :question="question" />
-					<question-text-area v-else-if="question.type == 'textArea'" :key="index" />
+					<question-text-area v-else-if="question.type == 'textArea'" :key="index" :question="question" />
 				</template>
 			</div>
 			<div v-else class="my-8">No questions</div>
