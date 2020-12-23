@@ -36,7 +36,7 @@ export default Vue.extend({
 	computed: {
 		buttonWidth(): number {
 			if (this.$vuetify.breakpoint.name == 'xs') {
-				return 36;
+				return 28;
 			}
 
 			return 48;

@@ -16,7 +16,8 @@ module.exports = {
 		'@typescript-eslint/no-use-before-define': ['error', { functions: false }],
 		'@typescript-eslint/no-explicit-any': 'off',
 		'vue/no-unused-components': 'off',
-		'vue/no-console': 'off'
+		'vue/no-console': 'off',
+		'no-console': 'off'
 	},
 	parserOptions: {
 		parser: '@typescript-eslint/parser'
