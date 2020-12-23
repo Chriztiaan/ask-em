@@ -1,20 +1,18 @@
 <template>
-	<!-- <v-app class="red">
-		<v-icon>mdi-home</v-icon>
-		{{ test }}
-	</v-app> -->
-	<question-container />
+	<v-app>
+		<survey-container />
+	</v-app>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import QuestionContainer from './components/QuestionContainer.vue';
+import SurveyContainer from './components/SurveyContainer.vue';
 
 import axios from 'axios';
 
 export default Vue.extend({
 	components: {
-		QuestionContainer
+		SurveyContainer
 	},
 	data() {
 		return {
@@ -47,5 +45,15 @@ export default Vue.extend({
 	text-align: center;
 	color: #2c3e50;
 	margin-top: 60px;
+}
+</style>
+<style>
+.question-text {
+	width: 100%;
+	text-align: left;
+}
+
+.text-colour {
+	color: rgba(0, 0, 0, 0.87);
 }
 </style>

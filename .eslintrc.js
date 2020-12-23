@@ -15,7 +15,8 @@ module.exports = {
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'@typescript-eslint/no-use-before-define': ['error', { functions: false }],
 		'@typescript-eslint/no-explicit-any': 'off',
-		'vue/no-unused-components': 'off'
+		'vue/no-unused-components': 'off',
+		'vue/no-console': 'off'
 	},
 	parserOptions: {
 		parser: '@typescript-eslint/parser'
