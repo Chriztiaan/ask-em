@@ -16,16 +16,16 @@
 					<question-range v-if="question.type == 'range'" :key="index" :question="question" />
 					<question-multiple v-else-if="question.type == 'multiple'" :key="index" :question="question" />
 					<question-text v-else-if="question.type == 'text'" :key="index" :question="question" />
-					<question-text-area v-else-if="question.type == 'textArea'" :key="index" :question="question" />
+					<question-text-area v-else-if="question.type == 'textArea'" :key="index" />
 				</template>
 			</div>
 			<div v-else class="my-8">No questions</div>
 
 			<div class="pa-4">
-				<v-btn text class="ma-2">
+				<v-btn v-if="step != 1" text class="ma-2" @click="$emit('back')">
 					Back
 				</v-btn>
-				<v-btn class="ma-2" color="primary" @click="e6 = 2">
+				<v-btn class="ma-2" color="primary" @click="$emit('continue')">
 					Continue
 				</v-btn>
 			</div>

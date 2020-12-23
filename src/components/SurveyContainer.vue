@@ -2,7 +2,14 @@
 	<div v-if="survey">
 		{{ survey.title }}
 		<v-stepper v-model="openSection" vertical non-linear>
-			<survey-section v-for="(section, index) in survey.sections" :key="index + 1" :step="index" :questions="section.questions">
+			<survey-section
+				v-for="(section, index) in survey.sections"
+				:key="index + 1"
+				:step="index + 1"
+				:questions="section.questions"
+				@continue="openSection++"
+				@back="openSection--"
+			>
 				<template v-slot:title>{{ section.title }}</template>
 				<template v-slot:description>
 					{{ section.description }}
@@ -32,7 +39,7 @@ export default Vue.extend({
 	},
 	data() {
 		return {
-			openSection: 0,
+			openSection: 1,
 			survey: undefined as undefined | Survey
 		};
 	},
